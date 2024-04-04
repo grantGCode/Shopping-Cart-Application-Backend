@@ -36,10 +36,11 @@ app.post('/', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items: lineItems,
       mode: 'payment',
-      success_url: 'http://localhost:3000/Success.jsx',
-      cancel_url:  'http://localhost:3000/Cancel.jsx',
+      success_url: 'https://elaborate-sunshine-85419d.netlify.app/Success',
+      cancel_url:  'https://elaborate-sunshine-85419d.netlify.app/Cancel',
     })
     res.send(JSON.stringify(session.url));
+
 
     if (res.status(200)){
       console.log('success');
