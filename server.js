@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 app.use(cors({
-  origin: 'https://660dfa02a9a42e773faf10b2--elaborate-sunshine-85419d.netlify.app/'
+  origin: 'https://660dfa02a9a42e773faf10b2--elaborate-sunshine-85419d.netlify.app'
 }));
 
 
