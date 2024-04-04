@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 app.use(cors({
-  origin: 'https://elaborate-sunshine-85419d.netlify.app/'
+  origin: 'https://660df7452a3958734310bbf8--elaborate-sunshine-85419d.netlify.app/'
 }));
 
 
@@ -37,8 +37,8 @@ app.post('/', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items: lineItems,
       mode: 'payment',
-      success_url: 'https://elaborate-sunshine-85419d.netlify.app/Success',
-      cancel_url:  'https://elaborate-sunshine-85419d.netlify.app/Cancel',
+      success_url: 'https://660df7452a3958734310bbf8--elaborate-sunshine-85419d.netlify.app/Success',
+      cancel_url:  'https://660df7452a3958734310bbf8--elaborate-sunshine-85419d.netlify.app/Cancel',
     })
     res.send(JSON.stringify(session.url));
 
