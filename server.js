@@ -40,7 +40,7 @@ app.post('/', async (req, res) => {
       success_url: 'https://660dfa02a9a42e773faf10b2--elaborate-sunshine-85419d.netlify.app/Success',
       cancel_url:  'https://660dfa02a9a42e773faf10b2--elaborate-sunshine-85419d.netlify.app/Cancel',
     })
-    res.send(JSON.stringify(session.url));
+    res.send(JSON.stringify(session.url));//check out page
 
 
     if (res.status(200)){
