@@ -37,8 +37,8 @@ app.post('/', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items: lineItems,
       mode: 'payment',
-      success_url: 'https://secure-swift-shoppers-cart.netlify.app/Success',
-      cancel_url:  'https://secure-swift-shoppers-cart.netlify.app/Cancel',
+      success_url: 'https://secure-swift-shoppers-cart.netlify.app/success',
+      cancel_url:  'https://secure-swift-shoppers-cart.netlify.app/cancel',
     })
     res.json({url: session.url});
 
